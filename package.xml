@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>csc495-particle-filter</name>
+  <version>0.0.0</version>
+  <description>
+    This package implements a particle filter-based localization algorithm for the CSC495 course.
+    It integrates TurtleBot3 in the Gazebo simulator and uses sensor data from LiDAR and odometry to estimate the robot's pose.
+    To run the simulation please use the roslaunch command followed by the package name and use the partical_filter.launch file. In a second terminal window please launch the partical_filter.py file using the rosrun command followed by the package name and then the file name.
+    This project was written using the starter provided in the instructions.
+  </description>
+
+  <!-- Maintainer information -->
+  <maintainer email="baspitz@ncsu.edu">Bennett Spitz</maintainer>
+
+  <!-- License -->
+  <license>BSD</license>
+
+  <!-- URL tags are optional, but multiple are allowed, one per tag -->
+  <url type="website">http://wiki.ros.org/csc495-particle-filter</url>
+  <url type="repository">https://github.com/baspitz/csc495-particle-filter</url>
+
+  <!-- Author information -->
+  <author email="baspitz@ncsu.edu">Bennett Spitz</author>
+
+  <!-- Build and runtime dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>turtlebot3_gazebo</build_depend>
+  <build_depend>map_server</build_depend>
+  <build_depend>gazebo_ros</build_depend>
+  
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>turtlebot3_gazebo</build_export_depend>
+  <build_export_depend>map_server</build_export_depend>
+  <build_export_depend>gazebo_ros</build_export_depend>
+  
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>turtlebot3_gazebo</exec_depend>
+  <exec_depend>map_server</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+
+  <!-- Test dependencies -->
+  <test_depend>gtest</test_depend>
+
+  <!-- Export for integration with Gazebo -->
+  <export>
+    <gazebo_ros gazebo_media_path="${prefix}"/>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+  </export>
+</package>
+
